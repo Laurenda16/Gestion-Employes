@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1699291937 source:c:\users\lolo pc\desktop\gestion-employes\main.cpp
+	<iostream>
+	"employe.h"
+	"gestionnaireemployes.h"
+
+1699291405 source:c:\users\lolo pc\desktop\gestion-employes\employe.cpp
+	"employe.h"
+
+1699291407 c:\users\lolo pc\desktop\gestion-employes\employe.h
+	<string>
+	<iostream>
+
+1699293292 source:c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.cpp
+	<iostream>
+	<string>
+	"gestionnaireemployes.h"
+	"employe.h"
+	<limits>
+
+1699291924 c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.h
+	<vector>
+	"employe.h"
+

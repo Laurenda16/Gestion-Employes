@@ -1,9 +1,21 @@
 #include <iostream>
 
-using namespace std;
+#include "employe.h"
+#include "gestionnaireemployes.h"
+
+
+using std::cout;
+using std::cin;
+using std::string;
+
+void test()
+{
+    gestionnaireEmployes ge;
+    ge.execute();
+}
 
 int main()
 {
-    cout << "Hello world!" << endl;
+test();
     return 0;
 }
