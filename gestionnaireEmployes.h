@@ -15,7 +15,7 @@ private:
   void afficheChargeMensuelleEmployes() const;
   double chargeMensuelleEmployes() const;
 
-  std::vector<std::unique_ptr<employe>> d_employes;
+  std::vector<std::unique_ptr< employe>> d_employes;
 };
 
 

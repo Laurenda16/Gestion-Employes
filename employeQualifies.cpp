@@ -18,6 +18,7 @@
   void employeQualifies::affiche(std::ostream& ost) const
   {
       employe::affiche(ost);
+
       ost<<"qualification"<< d_niveauQualification;
 
   }
