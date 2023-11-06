@@ -7,6 +7,7 @@
 class employe {
 public:
   employe(const std::string& nom, int indice);
+  virtual ~employe()=default;
 
   std::string nom() const;
   int indice() const;
