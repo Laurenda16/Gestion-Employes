@@ -1,11 +1,10 @@
 
+
 #include<iostream>
 #include<string>
 #include"gestionnaireemployes.h"
 #include "employe.h"
-#include "employeQualifies.h"
 #include <limits>
-#include <memory>
 
 
 using std::cout;
@@ -50,37 +49,26 @@ int gestionnaireEmployes::choixMenu()
 void gestionnaireEmployes::ajouteEmploye() {
     std::string nom;
     int indice;
-    int niveauQualification;
 
-    cout << "Voulez-vous ajouter un employe (1) ou un employe qualifie (2) ? ";
-    int choix;
-    cin >> choix;
+    cout << "Entrer votre nom :\n";
+    cin >> nom;
 
-    if (choix == 1) {
-        cout << "Entrer le nom de l'employe : ";
-        cin >> nom;
-        cout << "Entrer l'indice de l'employe : ";
+    // Validation pour l'indice
+    while (true) {
+        cout << "Entrer votre indice :\n";
         cin >> indice;
 
-        auto emp = std::make_unique<employe>(nom, indice);
-
-        d_employes.push_back(std::move(emp));
-
-    } else if (choix == 2) {
-        cout << "Entrer le nom de l'employe qualifie : ";
-        cin >> nom;
-        cout << "Entrer l'indice de l'employe qualifie : ";
-        cin >> indice;
-        // Demander d'autres informations spécifiques aux employés qualifiés
-        cout << "Entrer le niveau de qualification de remployer Qualifier : ";
-        cin >> niveauQualification;
-
-        auto empQualifie = std::make_unique<employeQualifies>(nom, indice, niveauQualification);
-
-        d_employes.push_back(std::move(empQualifie));
-    } else {
-        cout << "Choix invalide." ;
+        if (cin.fail()) {
+            cin.clear(); // Réinitialiser l'état d'erreur du flux cin
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignorer la ligne erronée
+            cout << "Erreur : Veuillez entrer un indice valide (entier)." << std::endl;
+        } else {
+            break;
+        }
     }
+
+    employe empl{nom, indice};
+    d_employes.push_back(empl);
 }
 
 
@@ -94,7 +82,7 @@ void gestionnaireEmployes::afficheEmployes() const
     {
         for(const auto& e: d_employes)
         {
-            e->affiche(cout);
+            e.affiche(cout);
         }
     }
 }
@@ -110,7 +98,7 @@ double gestionnaireEmployes::chargeMensuelleEmployes() const
   //À completer
    for(const auto& e: d_employes)
         {
-         cMensuelle+= e->salaireMensuel() ;
+         cMensuelle+= e.salaireMensuel() ;
         }
 return cMensuelle;
 }

@@ -1,7 +1,7 @@
 
 #ifndef GESTIONNAIREEMPLOYES_H
 #define GESTIONNAIREEMPLOYES_H
-
+#include <memory>
 #include<vector>
 #include"employe.h"
 
@@ -15,7 +15,7 @@ private:
   void afficheChargeMensuelleEmployes() const;
   double chargeMensuelleEmployes() const;
 
-  std::vector<employe> d_employes;
+  std::vector<std::unique_ptr<employe>> d_employes;
 };
 
 

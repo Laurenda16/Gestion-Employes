@@ -1,7 +1,9 @@
 #include <iostream>
 
 #include "employe.h"
-#include "gestionnaireemployes.h"
+#include "employeQualifies.h"
+#include "gestionnaireEmployes.h"
+
 
 
 using std::cout;

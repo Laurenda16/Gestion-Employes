@@ -1,24 +1,55 @@
 # depslib dependency file v1.0
-1699291937 source:c:\users\lolo pc\desktop\gestion-employes\main.cpp
+1699296371 source:c:\users\lolo pc\desktop\gestion-employes\main.cpp
 	<iostream>
 	"employe.h"
-	"gestionnaireemployes.h"
+	"employeQualifies.h"
+	"gestionnaireEmployes.h"
 
 1699291405 source:c:\users\lolo pc\desktop\gestion-employes\employe.cpp
 	"employe.h"
 
-1699291407 c:\users\lolo pc\desktop\gestion-employes\employe.h
+1699293863 c:\users\lolo pc\desktop\gestion-employes\employe.h
 	<string>
 	<iostream>
 
-1699293292 source:c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.cpp
+1699298728 source:c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.cpp
 	<iostream>
 	<string>
 	"gestionnaireemployes.h"
 	"employe.h"
+	"employeQualifies.h"
 	<limits>
 
-1699291924 c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.h
+1699299107 c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes.h
+	<memory>
 	<vector>
 	"employe.h"
+
+1699296381 source:c:\users\lolo pc\desktop\gestion-employes\employequalifies.cpp
+	<iostream>
+	<string>
+	"gestionnaireEmployes.h"
+	"employe.h"
+	"employeQualifies.h"
+
+1699295894 c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes1.h
+	<vector>
+	"employe.h"
+
+1699296159 c:\users\lolo pc\desktop\gestion-employes\employequalifies.h
+	"employe.h"
+
+1699296159 source:c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes1.cpp
+	<iostream>
+	<string>
+	"gestionnaireemployes1.h"
+	"employe.h"
+	<limits>
+
+1699296159 c:\users\lolo pc\desktop\gestion-employes\gestionnaireemployes1.cpp
+	<iostream>
+	<string>
+	"gestionnaireemployes1.h"
+	"employe.h"
+	<limits>
 
